@@ -1,10 +1,15 @@
 {
-  "name": "Ghost-Steam",
-  "version": "1.1-snapshot",
-  "description": "A minimalistic theme for Ghost.",
+  "name": "The Envoy",
+  "version": "1.0.0",
+  "description": "A minimalistic theme for Ghost used by The Envoy.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kdelfour/ghost-steam-theme.git"
+    "url": "https://github.com/areksredzki/theenvoy.git"
   },
-  "homepage": "http://kevin.delfour.eu/ghost-themes-projects/"
+  "author": "Arek Sredzki <arek@sredzki.com>",
+  "bugs": {
+    "url": "https://github.com/areksredzki/theenvoy/issues"
+  },
+  "homepage": "https://theenvoy.ca",
+  "private": true
 }
