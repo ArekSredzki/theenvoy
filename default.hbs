@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        {{! Document settings }}
+        {{#is "home"}}
+          <title>{{meta_title}} - {{meta_description}}</title>
+        {{else}}
+          <title>{{meta_title}}</title>
+        {{/is}}
+        
+        {{! Metadatas }}
+        {{#if posts}}
+        <meta name="author" content="{{posts.[0].author.name}}">
+        <meta name="copyright" content="{{posts.[0].author.name}}">
+        <meta name="publisher" content="{{posts.[0].author.name}}">
+        <meta name="geography" content="{{posts.[0].author.location}}">
+        <meta name="city" content="{{posts.[0].author.location}}">
+        {{/if}}
+        <meta name="subject" content="{{meta_description}}">
+        <meta name="description" content="{{meta_description}}">
+        <meta name="classification" content="{{meta_description}}">
+        <meta name="designer" content="Kevin Delfour">
+        <meta name="distribution" content="Global">
+        <meta name="Robots" content="index,follow">
+        <meta name="apple-mobile-web-app-title" content="{{meta_title}}">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="rating" content="general" />
+        <meta name="keywords" content="ghost, blog, {{meta_title}}" />
+        <meta charset="utf-8" />
+        <meta http-equiv="cache-control" content="public">
+
+        {{! iOS, Android and Windows stuff }}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{asset "img/apple-touch-icon-57x57.png"}}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{asset "img/apple-touch-icon-60x60.png"}}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{asset "img/apple-touch-icon-72x72.png"}}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{asset "img/apple-touch-icon-76x76.png"}}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{asset "img/apple-touch-icon-114x114.png"}}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{asset "img/apple-touch-icon-120x120.png"}}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{asset "img/apple-touch-icon-144x144.png"}}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{asset "img/apple-touch-icon-152x152.png"}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset "img/apple-touch-icon-180x180.png"}}">
+        
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="{{asset "img/mstile-144x144.png"}}">
+        <meta name="theme-color" content="#ffffff">
+
+        {{! Robots and Viewport }}
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {{! OpenGraph for Facebook }}
+        <meta property="og:title" content="{{meta_title}}" />
+        <meta property="og:locale" content="en_US" />
+
+        {{! Twitter Card }}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="{{meta_title}}" />
+
+        {{! Icons }}
+        <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
+        <link rel="icon" type="image/png" href="{{asset "img/favicon-32x32.png"}}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{asset "img/android-chrome-192x192.png"}}" sizes="192x192">
+        <link rel="icon" type="image/png" href="{{asset "img/favicon-96x96.png"}}" sizes="96x96">
+        <link rel="icon" type="image/png" href="{{asset "img/favicon-16x16.png"}}" sizes="16x16">
+
+        {{! Prerendering and Prefetching }}
+        {{#if @blog.cover}}
+            <link rel="prerender" href="{{@blog.cover}}" />
+            <link rel="prefetch" href="{{@blog.cover}}" />
+        {{/if}}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
+
+        {{! Stylesheets }}
+        <link rel="stylesheet" href="{{asset 'css/normalize.css'}}" />
+        <link rel="stylesheet" href="{{asset 'css/basics.css'}}" />
+        <link rel="stylesheet" href="{{asset 'css/animate.css'}}" />
+        <link rel="stylesheet" href="{{asset 'css/highlight.css'}}" />
+        <link rel="stylesheet" href="{{asset 'css/phantom.css'}}" />
+        
+        {{! Scripts }}
+        <script src="{{asset 'js/html5shiv-printshiv.js'}}"></script>
+        <script src="{{asset 'js/respond.js'}}"></script>
+
+        {{#if pagination.next}}<link href="{{page_url pagination.next}}" rel="prefetch">{{/if}}
+
+        {{! Page-Specific Metadata }}
+        {{{block "meta"}}}
+
+        {{ghost_head}}
+
+    </head>
+    <body class="{{body_class}}">
+        <nav class="animated fadeIn navigation">
+            <div class="container">
+                <a href="{{@blog.url}}" class="text-right sidebar brand">
+                    {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
+                </a>
+                {{navigation}}
+            </div>
+        </nav>
+        <div class="main">
+            {{{body}}}
+        </div>
+        <footer class="animated fadeIn" id="footer">
+            <div class="container text-center">
+                {{#if posts}}
+                <p class="copyright"><span>Made by {{posts.[0].author.name}}.</span> <span>Powered by Ghost.</span></p>
+                {{/if}}
+                <a href="https://github.com/haydenbleasel/phantom" class="theme">Theme: Phantom by Hayden Bleasel</a>
+            </div>
+        </footer>
+
+        {{ghost_foot}}
+
+        {{! Deferred scripts }}
+        <script src="{{asset 'js/fastclick.js'}}"></script>
+        <script src="{{asset 'js/stellar.js'}}"></script>
+        <script src="{{asset 'js/highlight.js'}}"></script>
+        <script src="{{asset 'js/phantom.js'}}"></script>
+        <script src="{{asset 'js/jquery.timeago.min.js'}}"></script>
+
+        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+
+    </body>
+</html>
