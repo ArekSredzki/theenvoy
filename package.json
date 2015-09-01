@@ -1,6 +1,5 @@
 {
-  "name": "theenvoy",
-
+  "name": "The Envoy",
   "version": "1.0.0",
   "description": "A minimalistic theme for Ghost used by The Envoy.",
   "repository": {
@@ -10,18 +9,6 @@
   "author": "Arek Sredzki <arek@sredzki.com>",
   "bugs": {
     "url": "https://github.com/areksredzki/theenvoy/issues"
-  },
-  "devDependencies": {
-    "coffee-script": "*",
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-concat": "*",
-    "gulp-cssmin": "*",
-    "gulp-header": "*",
-    "gulp-less": "*",
-    "gulp-livereload": "*",
-    "gulp-uglify": "*",
-    "gulp-util": "*"
   },
   "homepage": "https://theenvoy.ca",
   "private": true
