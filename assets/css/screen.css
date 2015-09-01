@@ -738,6 +738,10 @@ body.nav-opened .site-wrapper {
   left: 0;
   background: rgba(0, 0, 0, 0.4);
 }
+.home.no-cover {
+  height: 90px;
+  background: #183456;
+}
 
 /* Navigation */
 
@@ -1533,10 +1537,9 @@ body:not(.post-template) .post-title {
 }
 
 .no-cover.post-head.main-header {
-  height: 85px;
-  min-height: 0;
-  margin-bottom: 0;
-  background: transparent;
+  min-height: 0px;
+  height: 180px;
+  background: #183456;
 }
 
 .tag-head.main-header {
@@ -1552,7 +1555,7 @@ body:not(.post-template) .post-title {
 .no-cover.author-head.main-header {
   height: 10vh;
   min-height: 100px;
-  background: transparent;
+  background: #183456;
 }
 
 .author-profile {
