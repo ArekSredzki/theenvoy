@@ -1,22 +1,16 @@
-# The Envoy Theme
+# Casper
 
-A minimalistic theme for [Ghost](https://ghost.org/) designed for [The Envoy](http://theenvoy.ca/).
+The default theme for [Ghost](http://github.com/tryghost/ghost/).
 
-![The Envoy](assets/images/mockup.jpg)
+To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
-## Installation
+## Copyright & License
 
-1. Download the theme from GitHub.
-2. Upload the theme as described in the [Ghost Documentation](http://docs.ghost.org/usage/settings/).
+Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
 
-Looking for more instructions? Sorry, it's just that easy.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Enabling Disqus Comments
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-If you want to enable comments, simply open `post.hbs` and remove the exclamation mark in the comments block, so `{{!> comments}}` becomes `{{> comments}}`.
-
-You'll also need to enter your Disqus "shortname". Just head on over to the [Disqus](http://disqus.com/) website and register for an account. They'll give you a small snippet of code, but all we need from it is the following line:
-
-    var disqus_shortname = 'YOUR_SHORTNAME_HERE';
-
-Once you have that, just open `partials/comments.hbs` and replace the `YOUR_SHORTNAME_HERE` variable with the one Disqus gave you. Try not to edit any other settings or replace the code though, it's preconfigured to work with Ghost.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

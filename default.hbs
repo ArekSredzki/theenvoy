@@ -1,90 +1,48 @@
-<!doctype html>
-<html lang="en">
-    <head>
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        {{! Document settings and metadata }}
-        <title>{{meta_title}}</title>
-        <meta charset="utf-8" />
-        <meta name="designer" content="Arek Sredzki" />
-        <meta name="rating" content="general" />
-        <meta name="keywords" content="international relations, news, opinions, {{meta_title}}" />
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
 
-        {{! iOS, Android and Windows stuff }}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="format-detection" content="telephone=yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileImage" content="{{asset 'images/windows-tile.png'}}" />
-        <meta name="msapplication-TileColor" content="#262A2D" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        {{! Robots and Viewport }}
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-        {{! OpenGraph for Facebook }}
-        <meta property="og:title" content="{{meta_title}}" />
-        <meta property="og:locale" content="en_US" />
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
-        {{! Twitter Card }}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="{{meta_title}}" />
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
 
-        {{! Icons }}
-        <link rel="icon" href="{{asset 'favicon.ico'}}" />
-        <link rel="icon" sizes="196x196" href="{{asset 'images/android-homescreen.png'}}" />
-        <link rel="apple-touch-icon" href="{{asset 'images/apple-touch-icon.png'}}" />
+    {{navigation}}
 
-        {{! Prerendering and Prefetching }}
-        {{#if @blog.cover}}
-            <link rel="prerender" href="{{@blog.cover}}" />
-            <link rel="prefetch" href="{{@blog.cover}}" />
-        {{/if}}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
+    <div class="site-wrapper">
 
-        {{! Scripts and Stylesheets }}
-        <link rel="stylesheet" href="{{asset 'css/normalize.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/basics.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/animate.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/highlight.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/phantom.css'}}" />
-        <script src="{{asset 'js/html5shiv-printshiv.js'}}"></script>
-        <script src="{{asset 'js/respond.js'}}"></script>
+        {{! Everything else gets inserted here }}
+        {{{body}}}
 
-        {{! Page-Specific Metadata }}
-        {{{block "meta"}}}
-
-        {{ghost_head}}
-
-    </head>
-    <body class="{{body_class}}">
-        <nav class="animated fadeIn navigation">
-            <div class="container">
-                <a href="{{@blog.url}}" class="text-right sidebar brand">
-                    {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" />{{/if}}
-                </a>
-                <p class="content">{{@blog.title}}</p>
-            </div>
-        </nav>
-        <div class="main">
-            {{{body}}}
-        </div>
-        <footer class="animated fadeIn" id="footer">
-            <div class="container text-center">
-                <p class="copyright"><span>Made by {{@blog.title}}.</span> <span>Powered by Ghost.</span></p>
-                <a href="https://github.com/haydenbleasel/phantom" class="theme">Theme: Phantom by Hayden Bleasel</a>
-            </div>
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly hosted by <a href="http://arek.io">Arek Sredzki</a></section>
         </footer>
 
-        {{ghost_foot}}
+    </div>
 
-        {{! Deferred scripts }}
-        <script src="{{asset 'js/fastclick.js'}}"></script>
-        <script src="{{asset 'js/stellar.js'}}"></script>
-        <script src="{{asset 'js/highlight.js'}}"></script>
-        <script src="{{asset 'js/phantom.js'}}"></script>
-        <script src="{{asset 'js/jquery.timeago.min.js'}}"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
 
-        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+    {{! The main JavaScript file for The Envoy }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
-    </body>
+</body>
 </html>
