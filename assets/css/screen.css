@@ -100,7 +100,6 @@ dfn {
 }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -209,8 +208,6 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -401,7 +398,8 @@ h6 {
 
 a {
   color: #4A4A4A;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
 }
 
 a:hover {
@@ -467,7 +465,6 @@ hr {
 }
 
 blockquote {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1.75em 0 1.75em -2.2em;
   padding: 0 0 0 1.75em;
@@ -514,7 +511,6 @@ tt {
 }
 
 pre {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 0 1.75em 0;
   border: #E3EDF3 1px solid;
@@ -552,7 +548,6 @@ kbd {
 }
 
 table {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1.75em 0;
   width: 100%;
@@ -904,8 +899,6 @@ body.nav-opened .nav {
 }
 
 .facebook-button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -924,7 +917,8 @@ body.nav-opened .nav {
   line-height: 35px;
   border-radius: 3px;
   background: #fff;
-  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
 }
 
 .facebook-button:before {
@@ -933,8 +927,6 @@ body.nav-opened .nav {
 }
 
 .subscribe-button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -953,7 +945,8 @@ body.nav-opened .nav {
   line-height: 35px;
   border-radius: 3px;
   background: #fff;
-  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
 }
 
 .subscribe-button:before {
@@ -1034,8 +1027,6 @@ body.nav-opened .nav {
 }
 
 .blog-logo img {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   height: 38px;
@@ -1044,8 +1035,6 @@ body.nav-opened .nav {
 }
 
 .menu-button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
   float: right;
@@ -1060,7 +1049,8 @@ body.nav-opened .nav {
   line-height: 35px;
   white-space: nowrap;
   border-radius: 3px;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
 .menu-button:before {
@@ -1115,12 +1105,14 @@ body.nav-opened .nav {
   -webkit-transform: translate3D(94px, 0, 0);
   -ms-transform: translate3D(94px, 0, 0);
   transform: translate3D(94px, 0, 0);
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 .nav-opened .menu-button .word {
   opacity: 0;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 
@@ -1133,6 +1125,7 @@ body.nav-opened .nav {
   right: 0;
   height: 70px;
   border: none;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
@@ -1218,7 +1211,7 @@ body.nav-opened .nav {
 }
 
 
-/* Every post, on every page, gets this style on its <article> tag */
+/* Every post, on every page, gets this style on its  tag */
 
 .post {
   position: relative;
@@ -1583,8 +1576,6 @@ body:not(.post-template) .post-title {
 }
 
 .author-image {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -1705,13 +1696,15 @@ body:not(.post-template) .post-title {
 
 .read-next-story:hover:before {
   background: rgba(0, 0, 0, 0.8);
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 .read-next-story:hover .post:before {
   color: #222;
   background: #fff;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 .read-next-story:before {
@@ -1723,7 +1716,8 @@ body:not(.post-template) .post-title {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
 .read-next-story .post {
@@ -1740,7 +1734,8 @@ body:not(.post-template) .post-title {
   color: rgba(255, 255, 255, 0.8);
   border: rgba(255, 255, 255, 0.5) 1px solid;
   border-radius: 4px;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
 .read-next-story.prev .post:before {
@@ -1848,7 +1843,8 @@ body:not(.post-template) .post-title {
 
 .pagination a {
   color: #9EABB3;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 
@@ -1862,7 +1858,8 @@ body:not(.post-template) .post-title {
   border: #bfc8cd 1px solid;
   text-decoration: none;
   border-radius: 4px;
-  transition: border 0.3s ease;
+  -webkit-transition: border 0.3s ease;
+          transition: border 0.3s ease;
 }
 
 .older-posts {
@@ -1971,8 +1968,6 @@ body:not(.post-template) .post-title {
     margin-left: 0;
   }
   .main-header {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: auto;
     min-height: 240px;
