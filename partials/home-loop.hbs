@@ -14,7 +14,13 @@
             </header>
 
             <section class="post-excerpt">
-              <h2 class="page-description">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></h2>
+              <h2 class="page-description">
+                {{#if meta_description}}
+                  {{{meta_description}}}
+                {{else}}
+                  {{excerpt words="26"}}
+                {{/if}}
+                <a class="read-more" href="{{url}}">&raquo;</a></h2>
           </section>
           <footer class="page-meta">
               {{author}}
