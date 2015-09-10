@@ -1411,12 +1411,12 @@ body:not(.post-template) .post-title {
 
 
 .post-content a {
-  color: #1d5bae;
+  color: #1b529d;
   text-decoration: none;
 }
 
 .post-content a:hover {
-  color: #1b529d;
+  color: #103c79;
 }
 
 .footnotes {
