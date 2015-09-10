@@ -1086,7 +1086,7 @@ body.nav-opened .nav {
 
 .nav-closed .no-cover .menu-button {
   border-color: #BFC8CD;
-  color: #9EABB3;
+  color: #838e94;
 }
 
 .nav-closed .no-cover .menu-button:hover {
@@ -1266,11 +1266,11 @@ body:not(.post-template) .post-title {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 2.2rem;
-  color: #9EABB3;
+  color: #838e94;
 }
 
 .post-meta a {
-  color: #9EABB3;
+  color: #838e94;
   text-decoration: none;
 }
 
@@ -1409,6 +1409,16 @@ body:not(.post-template) .post-title {
   transform: translateX(-50%);
 }
 
+
+.post-content a {
+  color: #1d5bae;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  color: #1b529d;
+}
+
 .footnotes {
   font-style: italic;
   font-size: 1.3rem;
@@ -1458,11 +1468,11 @@ body:not(.post-template) .post-title {
   font-size: 1.4rem;
   line-height: 1;
   font-style: italic;
-  color: #9EABB3;
+  color: #838e94;
 }
 
 .author-meta a {
-  color: #9EABB3;
+  color: #838e94;
 }
 
 .author-meta a:hover {
@@ -1837,12 +1847,12 @@ body:not(.post-template) .post-title {
   margin: 4rem auto;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
-  color: #9EABB3;
+  color: #838e94;
   text-align: center;
 }
 
 .pagination a {
-  color: #9EABB3;
+  color: #838e94;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
