@@ -695,11 +695,13 @@ body.nav-opened .site-wrapper {
 .home.main-header {
   height: 50vh;
   margin-bottom: 0;
+  content: 'viewport-units-buggyfill; height: 50vh;';
 }
 
 .home.main-header:first-of-type {
   height: 100vh;
   margin-bottom: 0;
+  content: 'viewport-units-buggyfill; height: 100vh;';
 }
 
 .home.main-header::before {
@@ -1149,6 +1151,7 @@ body.nav-opened .nav {
   background: #f5f8fa;
   max-height: 40vh;
   min-height: 160px;
+  content: 'viewport-units-buggyfill; max-height: 40vh;';
 }
 
 .no-cover .page-title {
@@ -1499,6 +1502,7 @@ body:not(.post-template) .post-title {
 .post-head.main-header {
   height: 65vh;
   min-height: 180px;
+  content: 'viewport-units-buggyfill; height: 65vh;';
 }
 
 .no-cover.post-head.main-header {
@@ -1510,17 +1514,20 @@ body:not(.post-template) .post-title {
 .tag-head.main-header {
   height: 40vh;
   min-height: 180px;
+  content: 'viewport-units-buggyfill; height: 40vh;';
 }
 
 .author-head.main-header {
   height: 40vh;
   min-height: 180px;
+  content: 'viewport-units-buggyfill; height: 40vh;';
 }
 
 .no-cover.author-head.main-header {
   background: #183456;
   height: 10vh;
   min-height: 100px;
+  content: 'viewport-units-buggyfill; height: 10vh;';
 }
 
 .author-profile {
@@ -1872,6 +1879,7 @@ body:not(.post-template) .post-title {
 /* On page2+ make all the headers smaller */
 .archive-template .main-header {
   max-height: 30vh;
+  content: 'viewport-units-buggyfill; height: 30vh;';
 }
 
 /* On page2+ show extra pagination controls at the top of post list */
@@ -1954,6 +1962,7 @@ body:not(.post-template) .post-title {
     height: auto;
     min-height: 240px;
     padding: 15% 0;
+    content: 'viewport-units-buggyfill; height: 60vh;';
   }
 
   .no-cover.author-head.main-header {
@@ -1981,6 +1990,7 @@ body:not(.post-template) .post-title {
 
   .post-head.main-header {
     height: 45vh;
+    content: 'viewport-units-buggyfill; height: 45vh;';
   }
 
   .read-next {
@@ -2009,6 +2019,7 @@ body:not(.post-template) .post-title {
   .tag-head.main-header,
   .author-head.main-header {
     height: 30vh;
+    content: 'viewport-units-buggyfill; height: 30vh;';
   }
 
   blockquote {
@@ -2062,6 +2073,7 @@ body:not(.post-template) .post-title {
     max-height: 20vh;
     min-height: 160px;
     padding: 10% 0;
+    content: 'viewport-units-buggyfill; height: 20vh;';
   }
 
   .archive-template .main-header .page-description {
@@ -2107,6 +2119,7 @@ body:not(.post-template) .post-title {
   .main-header {
     height: 40vh;
     margin-bottom: 15px;
+    content: 'viewport-units-buggyfill; height: 40vh;';
   }
 
   .main-nav {
@@ -2161,6 +2174,7 @@ body:not(.post-template) .post-title {
 
   .no-cover.main-header {
     height: 30vh;
+    content: 'viewport-units-buggyfill; height: 30vh;';
   }
 
   .older-posts,
@@ -2234,6 +2248,7 @@ body:not(.post-template) .post-title {
 
   .post-head.main-header {
     height: 30vh;
+    content: 'viewport-units-buggyfill; height: 30vh;';
   }
 
   .post-meta {
@@ -2269,6 +2284,7 @@ body:not(.post-template) .post-title {
   .tag-head.main-header,
   .author-head.main-header {
     height: 20vh;
+    content: 'viewport-units-buggyfill; height: 20vh;';
   }
 
   body.nav-opened .menu-button {
