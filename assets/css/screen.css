@@ -563,6 +563,11 @@ margin on the iframe, cause it breaks stuff. */
   display: table-cell;
   vertical-align: middle;
 }
+/* Bottom vertical align (IE8+) */
+.vertical-bottom {
+  display: table-cell;
+  vertical-align: bottom;
+}
 
 /* Wraps the main content & footer */
 .site-wrapper {
@@ -598,6 +603,7 @@ body.nav-opened .site-wrapper {
   position: relative;
   text-align: center;
   width: 100%;
+  content: 'viewport-units-buggyfill; height: 100vh;';
 }
 
 .main-header .inner {
@@ -606,6 +612,7 @@ body.nav-opened .site-wrapper {
 }
 
 .main-nav {
+  pointer-events: none;
   margin: 0 0 30px;
   padding: 35px 40px;
   position: relative;
@@ -614,6 +621,7 @@ body.nav-opened .site-wrapper {
 .main-nav a {
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
+  pointer-events: all;
 }
 
 .home.main-header {
@@ -1008,8 +1016,8 @@ body.nav-opened .nav {
 
 /* Special styles when overlaid on an image*/
 .main-nav.overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);*/
   border: none;
   height: 70px;
   left: 0;
@@ -1136,6 +1144,10 @@ body:not(.post-template) .post-title {
   font-size: 36px;
 }
 
+.post-title {
+  color: #ffffff;
+}
+
 .post-title a {
   text-decoration: none;
 }
@@ -1151,7 +1163,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta {
-  color: #838e94;
+  color: #ffffff;
   display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
@@ -1163,7 +1175,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-  color: #838e94;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -1194,6 +1206,16 @@ body:not(.post-template) .post-title {
   margin-left: 8px;
   padding-left: 12px;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.eta {
+  border-left: #d5dbde 1px solid;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-size: 13px;
+  margin-left: 8px;
+  padding-left: 12px;
   white-space: nowrap;
 }
 
@@ -1243,6 +1265,34 @@ body:not(.post-template) .post-title {
 .post-template .post-header {
   margin-bottom: 3.4rem;
   margin-bottom: 34px;
+}
+
+.post-header.main-header::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  /*background: rgba(0, 0, 0, 0.4);*/
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.post-template .post-header {
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.post-template .post-head.main-header {
+  height: 100vh;
+  min-height: 300px;
+  content: 'viewport-units-buggyfill; height: 100vh;';
+}
+
+.post-template .main-header .inner {
+  padding: 50px 0;
 }
 
 .post-template .post-title {

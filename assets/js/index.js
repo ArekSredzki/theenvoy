@@ -59,6 +59,8 @@
 
     };
 
+    $('article').readingTime();
+
     // Viewport unit buggyfill
     var hacks = window.viewportUnitsBuggyfillHacks;
     window.viewportUnitsBuggyfill.init({
