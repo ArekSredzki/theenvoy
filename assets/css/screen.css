@@ -1163,7 +1163,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta {
-  color: #ffffff;
+  color: #a9a9a9;
   display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
@@ -1174,9 +1174,17 @@ body:not(.post-template) .post-title {
   margin: 17px 0 0;
 }
 
-.post-meta a {
+.main-header-content .post-meta {
   color: #ffffff;
+}
+
+.post-meta a {
+  color: #a9a9a9;
   text-decoration: none;
+}
+
+.main-header-content .post-meta a {
+  color: #ffffff;
 }
 
 .post-meta a:hover {
