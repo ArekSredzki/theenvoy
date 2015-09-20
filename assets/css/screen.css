@@ -1528,7 +1528,7 @@ body:not(.post-template) .post-title {
   overflow: hidden;
   padding: 6px;
   position: absolute;
-  top: -40px;
+  top: -60px;
   width: 80px;
   z-index: 2;
 }
