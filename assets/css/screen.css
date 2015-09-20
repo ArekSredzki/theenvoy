@@ -2253,7 +2253,7 @@ body:not(.post-template) .post-title {
   }
 
   .read-next .post {
-    calc(width: 100% - 32px);		
+    width: calc(100% - 32px);		
   }
 
   .site-footer {
