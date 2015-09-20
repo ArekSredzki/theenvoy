@@ -2252,6 +2252,10 @@ body:not(.post-template) .post-title {
     margin-top: 2rem;
   }
 
+  .read-next .post {
+    width: 100%;		
+  }
+
   .site-footer {
     margin-top: 3rem;
   }
