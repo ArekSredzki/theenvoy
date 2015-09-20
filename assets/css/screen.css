@@ -1198,18 +1198,7 @@ body:not(.post-template) .post-title {
   position: relative;
 }
 
-.post-date-2 {
-  border-left: #d5dbde 1px solid;
-  display: inline-block;
-  font-size: 1.3rem;
-  font-size: 13px;
-  margin-left: 8px;
-  padding-left: 12px;
-  /*text-transform: uppercase;*/
-  white-space: nowrap;
-}
-
-.eta-wrap {
+.padded-meta {
   border-left: #d5dbde 1px solid;
   display: inline-block;
   font-size: 1.3rem;
@@ -1904,6 +1893,11 @@ body:not(.post-template) .post-title {
    11. Media Queries - Smaller than 900px
    ========================================================================== */
 @media only screen and (max-width: 900px) {
+  .padded-meta {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .archive-template .main-header {
     min-height: 180px;
     padding: 10% 0;
@@ -1935,7 +1929,6 @@ body:not(.post-template) .post-title {
     height: 60vh;
     height: auto;
     min-height: 240px;
-    padding: 15% 0;
     content: 'viewport-units-buggyfill; height: 60vh;';
   }
 
@@ -2088,6 +2081,10 @@ body:not(.post-template) .post-title {
   .pagination {
     margin: 2rem auto;
     width: auto;
+  }
+
+  .post-template .inner {
+    margin: 0 auto;
   }
 
   .main-header {
@@ -2245,10 +2242,6 @@ body:not(.post-template) .post-title {
   .read-next {
     margin-bottom: -37px;
     margin-top: 2rem;
-  }
-
-  .read-next .post {
-    width: 100%;
   }
 
   .site-footer {
