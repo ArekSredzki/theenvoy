@@ -1257,8 +1257,8 @@ body:not(.post-template) .post-title {
 }
 
 .post-header.main-header::before {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 50%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 50%);
   /*background: rgba(0, 0, 0, 0.4);*/
   bottom: 0;
   content: "";
