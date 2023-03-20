@@ -3,21 +3,21 @@
 
 {{! The big featured header }}
 
-{{! Everything inside the #author tags pulls data from the author }}
-{{#author}}
-    <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
+{{! Everything inside the #primary_author tags pulls data from the author }}
+{{#primary_author}}
+    <header class="main-header author-head {{#if cover_image}}" style="background-image: url({{img_url cover_image}}){{else}}no-cover{{/if}}">
         <nav class="main-nav overlay clearfix">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-            {{#if @blog.navigation}}
+            {{#if @site.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
+            {{#if @site.navigation}}
                 <a class="menu-button" href="#"><i class="fa fa-bars"></i><span class="word"> Menu</span></a>
             {{/if}}
         </nav>
     </header>
 
     <section class="author-profile inner">
-        {{#if image}}
+        {{#if profile_image}}
         <figure class="author-image">
-            <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+            <div class="img" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
         {{/if}}
         <h1 class="author-title">{{name}}</h1>
@@ -30,7 +30,7 @@
             <span class="author-stats"><i class="fa fa-bar-chart"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
         </div>
     </section>
-{{/author}}
+{{/primary_author}}
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">

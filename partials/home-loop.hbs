@@ -5,7 +5,7 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="home main-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+<article class="home main-header {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}">
 
     <div class="vertical">
         <div class="main-header-content inner">
@@ -23,7 +23,7 @@
                 <a class="read-more" href="{{url}}">&raquo;</a></h2>
           </section>
           <footer class="page-meta">
-              {{author}}
+              {{authors}}
               {{tags prefix=" on "}}
               <time class="post-date padded-meta" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
           </footer>

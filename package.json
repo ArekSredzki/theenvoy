@@ -1,12 +1,17 @@
 {
-  "name": "The Envoy",
-  "version": "1.0.0",
+  "name": "the-envoy",
+  "version": "2.0.0",
   "description": "A minimalistic theme for Ghost used by The Envoy.",
+  "keywords": ["ghost-theme"],
+  "card_assets": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/areksredzki/theenvoy.git"
   },
-  "author": "Arek Sredzki <arek@sredzki.com>",
+  "author": {
+    "name": "Arek Sredzki",
+    "email": "arek@sredzki.com"
+  },
   "bugs": {
     "url": "https://github.com/areksredzki/theenvoy/issues"
   },

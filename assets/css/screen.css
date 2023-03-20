@@ -19,6 +19,11 @@
     13. Animations
 
 */
+.kg-width-full img,
+.kg-width-wide img{
+    // required by gcsan to properly validate the theme
+}
+
 /* ==========================================================================
    0. Normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
@@ -915,8 +920,8 @@ body.nav-opened .nav {
 /* Hide when there's no cover image or on page2+ */
 .no-cover .scroll-down,
 .no-cover.main-header:after,
-.archive-template .scroll-down,
-.archive-template .main-header:after {
+.paged .scroll-down,
+.paged .main-header:after {
   display: none;
 }
 
@@ -1606,7 +1611,7 @@ body:not(.post-template) .post-title {
 
 /* Turn off meta for page 2+ to make room for extra
    pagination prev/next links */
-.archive-template .author-profile .author-meta {
+.paged .author-profile .author-meta {
   display: none;
 }
 
@@ -1848,13 +1853,13 @@ body:not(.post-template) .post-title {
 }
 
 /* On page2+ make all the headers smaller */
-.archive-template .main-header {
+.paged .main-header {
   max-height: 30vh;
   content: 'viewport-units-buggyfill; height: 30vh;';
 }
 
 /* On page2+ show extra pagination controls at the top of post list */
-.archive-template .extra-pagination {
+.paged .extra-pagination {
   display: block;
 }
 
@@ -1906,7 +1911,7 @@ body:not(.post-template) .post-title {
     padding-left: 0;
   }
 
-  .archive-template .main-header {
+  .paged .main-header {
     min-height: 180px;
     padding: 10% 0;
   }
@@ -2044,14 +2049,14 @@ body:not(.post-template) .post-title {
    12. Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
-  .archive-template .main-header {
+  .paged .main-header {
     max-height: 20vh;
     min-height: 160px;
     padding: 10% 0;
     content: 'viewport-units-buggyfill; height: 20vh;';
   }
 
-  .archive-template .main-header .page-description {
+  .paged .main-header .page-description {
     display: none;
   }
 
@@ -2253,7 +2258,7 @@ body:not(.post-template) .post-title {
   }
 
   .read-next .post {
-    width: calc(100% - 32px);		
+    width: calc(100% - 32px);
   }
 
   .site-footer {
